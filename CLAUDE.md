@@ -20,3 +20,28 @@ agent that believes it already knows the framework skips them.
 Entities, vocabularies, error codes and boundary DTOs come from `@arthome/core` and
 `@arthome/contracts`. The architecture, the ADRs and the arbitration log live in
 **[arthome-core](https://github.com/jubasse/arthome-core)** — see `README.md`.
+
+## Comments — delete by default
+
+**The default is no comment.** Name it first: `waitUntilDue` needs no gloss, `handleRetryTiming`
+needs one. Then comment only what a name cannot carry.
+
+**The test**: would a reader with this code in front of them learn something they could not derive
+from it?
+
+**Keep** — a measured failure with what it cost · a constraint invisible at that line · a decision
+and its reason · a `⚠` where the obvious change is wrong.
+
+**Delete** — a comment on trivial code (a delegate, a getter, a `findAll` calling `Model.findAll`) ·
+a block above a name that already carries it · JSDoc restating the signature · narration of a
+readable sequence · history · a default explained · prose about what the file does *not* do.
+
+**Where one line does, use one line.** A surviving `⚠` is two to four lines, never ten.
+
+⚠ **Never delete a recorded measurement** — shorten its prose to one sentence, keep the fact. And
+**never a one-line gloss on an exported name**: `REPOSITORY_MAP.md` is generated from it.
+
+⚠ **The mechanism that produces the problem**: paying yourself in comment lines for what the
+discovery cost. That belongs in the commit message, not at the line.
+
+Full rule, with four measured shapes: `code-conventions.md` §5.10.
