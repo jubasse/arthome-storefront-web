@@ -36,10 +36,18 @@ and its reason · a `⚠` where the obvious change is wrong.
 a block above a name that already carries it · JSDoc restating the signature · narration of a
 readable sequence · history · a default explained · prose about what the file does *not* do.
 
-**Where one line does, use one line.** A surviving `⚠` is two to four lines, never ten.
+**TypeScript already documents the types, so JSDoc must not.** The signature gives the parameter
+names, their types and the return type; repeating it is noise. JSDoc earns its place only for a
+parameter whose **meaning** the type cannot give, or a **union return** — which branch comes back and
+when. Never systematically.
 
-⚠ **Never delete a recorded measurement** — shorten its prose to one sentence, keep the fact. And
-**never a one-line gloss on an exported name**: `REPOSITORY_MAP.md` is generated from it.
+**Where one line does, use one line, and give the scope rather than the whole story.** A surviving `⚠` is two to four lines, never ten.
+
+⚠ **Never delete a recorded measurement** — shorten its prose to one sentence, keep the fact.
+
+⚠ `REPOSITORY_MAP.md` is generated from JSDoc, but each row also prints the **type signature**, so a
+blank description is not a stranded reader. Same test as everywhere: a description earns its place by
+saying what the name and the signature cannot. It must never open on `⚠`.
 
 ⚠ **The mechanism that produces the problem**: paying yourself in comment lines for what the
 discovery cost. That belongs in the commit message, not at the line.
