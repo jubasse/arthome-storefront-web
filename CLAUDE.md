@@ -21,6 +21,13 @@ Entities, vocabularies, error codes and boundary DTOs come from `@arthome/core` 
 `@arthome/contracts`. The architecture, the ADRs and the arbitration log live in
 **[arthome-core](https://github.com/jubasse/arthome-core)** — see `README.md`.
 
+## Branches (D-087)
+
+Nothing is committed on `main` or `develop`. Work goes on `feature/{name}` from `develop` and reaches
+`develop` through a pull request; a release is `release/{version}` from `develop`, merged into `main`,
+tagged `v{version}` and merged back, in the four repositories at once with one shared version. The
+decision is arthome-core's D-087.
+
 ## Comments — delete by default
 
 **The default is no comment.** Name it first: `waitUntilDue` needs no gloss, `handleRetryTiming`
