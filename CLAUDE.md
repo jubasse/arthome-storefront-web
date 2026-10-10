@@ -2,9 +2,12 @@
 
 ## Load the Next.js router before writing code — every session, without exception
 
-**`nextjs-how-to`.** Load it at the start of any task that writes, reviews or debugs code here, and
-load the skills it routes to. This includes the first task after a context compaction: a compacted
-session keeps the conclusions and loses the reflex.
+**`nextjs-how-to`.** Load it, and the skills it routes to, as the very first action of any task that
+touches Next.js even remotely: code, review, QA, docs, CI, PRDs. Never defer it to a later step. The
+session loads it, and so does every agent the session spawns, as the first line of that agent's
+prompt. There is no review skill for this stack, so a review loads the router and its routed skills.
+This includes the first task after a context compaction: a compacted session keeps the conclusions
+and loses the reflex.
 
 **Follow those skills to the letter.** They are the project's chosen best practices, not
 suggestions, and they are more current than any model's memory of Next.js or React.
