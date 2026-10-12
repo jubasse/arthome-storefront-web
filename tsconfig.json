@@ -3,6 +3,7 @@
   "extends": "@arthome/tooling/tsconfig/app.json",
   "compilerOptions": {
     "paths": { "@/*": ["./src/*"] },
+    "lib": ["es2022", "dom", "dom.iterable"],
     "types": ["node"],
     "jsx": "react-jsx",
     "plugins": [{ "name": "next" }]

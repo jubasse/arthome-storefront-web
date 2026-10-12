@@ -167,11 +167,17 @@ importers:
   .:
     dependencies:
       '@arthome/contracts':
-        specifier: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-contracts-0.3.0.tgz
-        version: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-contracts-0.3.0.tgz(@arthome/core@https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz(zod@4.6.5))(zod@4.6.5)
+        specifier: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-contracts-0.4.0-rc.3.tgz
+        version: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-contracts-0.4.0-rc.3.tgz(@arthome/core@https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz(zod@4.6.5))(zod@4.6.5)
       '@arthome/core':
-        specifier: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz
-        version: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz(zod@4.6.5)
+        specifier: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz
+        version: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz(zod@4.6.5)
+      client-only:
+        specifier: 0.0.1
+        version: 0.0.1
+      hls.js:
+        specifier: 1.7.3
+        version: 1.7.3
       next:
         specifier: 16.3.8
         version: 16.3.8(@babel/core@7.29.7)(@types/node@24.19.1)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -186,8 +192,8 @@ importers:
         version: 4.6.5
     devDependencies:
       '@arthome/tooling':
-        specifier: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-tooling-0.3.0.tgz
-        version: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-tooling-0.3.0.tgz(@eslint/js@10.0.1(eslint@10.11.0))(@typescript-eslint/utils@8.70.0(eslint@10.11.0)(typescript@6.0.3))(eslint-config-prettier@10.1.8(eslint@10.11.0))(eslint-import-resolver-node@0.3.10)(eslint-plugin-import@2.32.0)(eslint@10.11.0)(prettier@3.9.8)(typescript@6.0.3)
+        specifier: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-tooling-0.4.0-rc.3.tgz
+        version: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-tooling-0.4.0-rc.3.tgz(@eslint/js@10.0.1(eslint@10.11.0))(@typescript-eslint/utils@8.70.0(eslint@10.11.0)(typescript@6.0.3))(eslint-config-prettier@10.1.8(eslint@10.11.0))(eslint-import-resolver-node@0.3.10)(eslint-plugin-import@2.32.0)(eslint@10.11.0)(prettier@3.9.8)(typescript@6.0.3)
       '@eslint/js':
         specifier: 10.0.1
         version: 10.0.1(eslint@10.11.0)
@@ -239,17 +245,17 @@ importers:
 
 packages:
 
-  '@arthome/contracts@https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-contracts-0.3.0.tgz':
-    resolution: {integrity: sha512-d28PQMYllr7wBWQutFs+kge6ogq81OHze5RwZsqsiY4kn7gMM8qsSD3AFmAxaijZh9aGniPJwKEryefxsNPKSQ==, tarball: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-contracts-0.3.0.tgz}
-    version: 0.3.0
+  '@arthome/contracts@https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-contracts-0.4.0-rc.3.tgz':
+    resolution: {integrity: sha512-Subxoqw7BIhkXg+k24wi/tkczg49eLsr/j4xHymMI0tAhMOqex4Cofo+jpxQi2NfpCqegLREuaFr7UaqEUllAg==, tarball: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-contracts-0.4.0-rc.3.tgz}
+    version: 0.4.0-rc.3
     engines: {node: ^22.22.3 || ^24.15.0 || >=26}
     peerDependencies:
-      '@arthome/core': 0.3.0
+      '@arthome/core': 0.4.0-rc.3
       zod: 4.6.5
 
-  '@arthome/core@https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz':
-    resolution: {integrity: sha512-oaXpQWhjjWrKw1kxMXtJOq4QPf7GEPkfXqsqZaBKLKpFp+pjwT3OLLf5PLvdzuMaB2OhENXj0MrGQKUQ1dGqvw==, tarball: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz}
-    version: 0.3.0
+  '@arthome/core@https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz':
+    resolution: {integrity: sha512-qbrcMWnPSkZZQE2INvGxY5Sp17CoRPesGaC+7BiiZ43/CmsV0jek44oKvdVloBkOEHZk8+dgY6QKdqYezBUUYw==, tarball: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz}
+    version: 0.4.0-rc.3
     engines: {node: ^22.22.3 || ^24.15.0 || >=26}
     peerDependencies:
       zod: 4.6.5
@@ -257,9 +263,9 @@ packages:
       zod:
         optional: true
 
-  '@arthome/tooling@https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-tooling-0.3.0.tgz':
-    resolution: {integrity: sha512-/3qUVCYliJb5B8hz0KV2XetQ9Gl4SZ+lu+9tSgcrU1TJrNbPsItq3XEfl7WJhJwyheTiMXuQTQ2Kh/SU+1b1AQ==, tarball: https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-tooling-0.3.0.tgz}
-    version: 0.3.0
+  '@arthome/tooling@https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-tooling-0.4.0-rc.3.tgz':
+    resolution: {integrity: sha512-/6IntrHPmYLNrq5HvVxjy0GF8G6uq3aje5a6jC8aoidESAFNd//ioT0MqWlisO0dn3t5SbdMa2jNR4bDjo6EAg==, tarball: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-tooling-0.4.0-rc.3.tgz}
+    version: 0.4.0-rc.3
     engines: {node: ^22.22.3 || ^24.15.0 || >=26}
     hasBin: true
     peerDependencies:
@@ -1710,6 +1716,9 @@ packages:
   hermes-parser@0.25.1:
     resolution: {integrity: sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==}
 
+  hls.js@1.7.3:
+    resolution: {integrity: sha512-MsPlx6yVW4Qv4C7mEVou4/gk/5cN2dVxOTnrNjPSmyH2f0Ln+/UkG10Ax1PE6OvrmTVPKgQYozTtBaPOuCzq7A==}
+
   hookified@1.15.1:
     resolution: {integrity: sha512-MvG/clsADq1GPM2KGo2nyfaWVyn9naPiXrqIe4jYjXNZQt238kWyOGrsyc/DmRAQ+Re6yeo6yX/yoNCG5KAEVg==}
 
@@ -2629,16 +2638,16 @@ packages:
 
 snapshots:
 
-  '@arthome/contracts@https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-contracts-0.3.0.tgz(@arthome/core@https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz(zod@4.6.5))(zod@4.6.5)':
+  '@arthome/contracts@https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-contracts-0.4.0-rc.3.tgz(@arthome/core@https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz(zod@4.6.5))(zod@4.6.5)':
     dependencies:
-      '@arthome/core': https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz(zod@4.6.5)
+      '@arthome/core': https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz(zod@4.6.5)
       zod: 4.6.5
 
-  '@arthome/core@https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz(zod@4.6.5)':
+  '@arthome/core@https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz(zod@4.6.5)':
     optionalDependencies:
       zod: 4.6.5
 
-  '@arthome/tooling@https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-tooling-0.3.0.tgz(@eslint/js@10.0.1(eslint@10.11.0))(@typescript-eslint/utils@8.70.0(eslint@10.11.0)(typescript@6.0.3))(eslint-config-prettier@10.1.8(eslint@10.11.0))(eslint-import-resolver-node@0.3.10)(eslint-plugin-import@2.32.0)(eslint@10.11.0)(prettier@3.9.8)(typescript@6.0.3)':
+  '@arthome/tooling@https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-tooling-0.4.0-rc.3.tgz(@eslint/js@10.0.1(eslint@10.11.0))(@typescript-eslint/utils@8.70.0(eslint@10.11.0)(typescript@6.0.3))(eslint-config-prettier@10.1.8(eslint@10.11.0))(eslint-import-resolver-node@0.3.10)(eslint-plugin-import@2.32.0)(eslint@10.11.0)(prettier@3.9.8)(typescript@6.0.3)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.11.0)
       eslint: 10.11.0
@@ -4137,6 +4146,8 @@ snapshots:
   hermes-parser@0.25.1:
     dependencies:
       hermes-estree: 0.25.1
+
+  hls.js@1.7.3: {}
 
   hookified@1.15.1: {}
 

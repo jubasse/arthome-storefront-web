@@ -34,15 +34,17 @@
     "verify:full": "pnpm run verify:offline && pnpm run check:prettier-conflict && pnpm run format:check:full && pnpm run lint:full && pnpm run typecheck:full && pnpm run test"
   },
   "dependencies": {
-    "@arthome/contracts": "https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-contracts-0.3.0.tgz",
-    "@arthome/core": "https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-core-0.3.0.tgz",
+    "@arthome/contracts": "https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-contracts-0.4.0-rc.3.tgz",
+    "@arthome/core": "https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz",
+    "client-only": "0.0.1",
+    "hls.js": "1.7.3",
     "next": "16.3.8",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "zod": "4.6.5"
   },
   "devDependencies": {
-    "@arthome/tooling": "https://github.com/jubasse/arthome-core/releases/download/v0.3.0/arthome-tooling-0.3.0.tgz",
+    "@arthome/tooling": "https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-tooling-0.4.0-rc.3.tgz",
     "@eslint/js": "10.0.1",
     "@testing-library/dom": "10.4.2",
     "@testing-library/react": "16.3.3",
