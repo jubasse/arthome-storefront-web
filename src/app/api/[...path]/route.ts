@@ -1,4 +1,5 @@
 import { proxyToBff } from '@/lib/bff-proxy';
+import { bffUrl, lastForwardedAddress } from '@/lib/bff-server';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -7,16 +8,11 @@ interface RouteContext {
   readonly params: Promise<{ readonly path: string[] }>;
 }
 
-function lastForwardedAddress(request: Request): string | undefined {
-  const last = request.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim();
-  return last === undefined || last === '' ? undefined : last;
-}
-
 async function handle(request: Request, context: RouteContext): Promise<Response> {
   const { path } = await context.params;
-  const remoteAddress = lastForwardedAddress(request);
+  const remoteAddress = lastForwardedAddress(request.headers);
   return proxyToBff(request, path, {
-    bffUrl: process.env.BFF_URL ?? 'http://localhost:3003',
+    bffUrl: bffUrl(),
     ...(remoteAddress !== undefined && { remoteAddress }),
   });
 }

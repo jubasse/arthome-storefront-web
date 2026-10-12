@@ -31,6 +31,7 @@ export function LivePlayer({ dateId, deviceId, profileId }: LivePlayerProps) {
       dateId,
       deviceId,
       profileId,
+      onConnecting: () => setState({ phase: 'connecting' }),
       onPlaying: () => setState({ phase: 'playing' }),
       onRefused: (code) => setState({ phase: 'stopped', message: refusalMessage(code) }),
       onUnauthenticated: () =>

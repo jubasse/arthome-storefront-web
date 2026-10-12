@@ -172,6 +172,9 @@ importers:
       '@arthome/core':
         specifier: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz
         version: https://github.com/jubasse/arthome-core/releases/download/v0.4.0-rc.3/arthome-core-0.4.0-rc.3.tgz(zod@4.6.5)
+      client-only:
+        specifier: 0.0.1
+        version: 0.0.1
       hls.js:
         specifier: 1.7.3
         version: 1.7.3

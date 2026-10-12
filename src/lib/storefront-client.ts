@@ -1,3 +1,5 @@
+import 'client-only';
+
 import { createClient } from '@arthome/contracts/http-client';
 import { storefrontApi } from '@arthome/contracts/storefront-api';
 import { ApiErrorCode, Surface } from '@arthome/core';
