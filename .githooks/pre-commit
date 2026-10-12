@@ -1,0 +1,37 @@
+#!/bin/sh
+# Two jobs, in this order: format what is staged, then refuse a red commit.
+# `;` discards a gate's status where `&&` keeps it; a hook enforces the gate whatever the
+# shell line around `git commit` says.
+
+set -e
+
+# Prettier on staged files only. `md` is absent on purpose: Prettier does not own prose.
+files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(ts|tsx|js|mjs|json|html|css|scss)$' || true)
+if [ -n "$files" ]; then
+  echo "$files" | xargs pnpm exec prettier --write
+  echo "$files" | xargs git add
+fi
+
+# `--no-renames` and no `--diff-filter`: a deleted or renamed non-`.md` path must still
+# count as "not docs", or its typecheck would be skipped.
+staged=$(git diff --cached --name-only --no-renames)
+docs_only=true
+for f in $staged; do
+  case "$f" in
+    *.md) ;;
+    *) docs_only=false ;;
+  esac
+done
+
+if [ "$docs_only" = true ] && [ -n "$staged" ]; then
+  gate='pnpm run check:symbols && pnpm run check:language'
+else
+  gate='pnpm run verify'
+fi
+
+if ! eval "$gate"; then
+  echo ''
+  echo "pre-commit: \`$gate\` failed — nothing was committed."
+  echo '  Fix it, or state why and use `git commit --no-verify` deliberately.'
+  exit 1
+fi

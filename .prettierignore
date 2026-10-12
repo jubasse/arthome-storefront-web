@@ -1,0 +1,13 @@
+# Prettier owns code formatting, not prose (code-conventions.md 5.1).
+**/*.md
+
+# Projection of arthome-core, rewritten on every install.
+docs/arthome/
+
+# Generated or machine-owned
+pnpm-lock.yaml
+.next/
+out/
+coverage/
+node_modules/
+next-env.d.ts

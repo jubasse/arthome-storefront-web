@@ -1,28 +1,44 @@
 # arthome-storefront-web
 
-The **public storefront**, in **Next.js 16**. Search ranking and server rendering decide it: this is
-a ticketing catalogue.
+The Arthome storefront for the web: Next.js 16 App Router, server rendered for search ranking.
 
-12 routes · a cart in three stages · an account in eleven sections
+**Status: scaffold.** One placeholder page, the gates and CI. Sign-in and the player come next.
 
-## Status
+The domain, the architecture and the decisions live in
+[arthome-core](https://github.com/jubasse/arthome-core).
 
-**Not started.** Tier 3 — one product, end to end. The whole use case: buying a seat, from the
-storefront through to the payout.
+## Getting started
 
-## Where the design lives
+Node 24 (`.nvmrc`) and pnpm 12 (`packageManager`, through Corepack).
 
-The architecture, the interface contracts, the decisions and their reasons all live in
-**[arthome-core](https://github.com/jubasse/arthome-core)**:
+```sh
+git config core.hooksPath .githooks   # once after cloning
+pnpm install
+pnpm run dev                          # http://localhost:3000
+```
 
-- `architecture/` — the context map, the data model, the event catalogue, the ADRs
-- `openapi/` — the contracts of the two BFFs
-- `proto/` — the Kafka event schemas
-- `DECISIONS.md` — the arbitration log
-- `architecture/critical-rules.md` — **re-read it every session**, nineteen lines
+## Commands
 
-## Arthome
+- `pnpm run dev`, `build`, `start`: Next.js, all on port 3000.
+- `pnpm run verify`: the gates (checks, Prettier, ESLint, TypeScript, Vitest). Cached; it runs on every commit.
+- `pnpm run verify:full`: the same without caches. It runs before every push.
+- `pnpm run format`: Prettier on the whole repository.
+- `pnpm run test`: Vitest.
 
-A streaming platform for live performance: ticketing, live, moderated chat, replays,
-merchandise, artist payouts. Two products — a public storefront and a professional studio — across
-five surfaces, served by seven microservices.
+## Consuming arthome-core
+
+`@arthome/tooling`, `@arthome/core` and `@arthome/contracts` are the tarballs attached to a GitHub
+release of arthome-core, never a registry package.
+
+```sh
+pnpm run use-core 0.4.0
+```
+
+This checks that the release assets exist, rewrites the three specs in `package.json` and installs.
+`pnpm run check:core-specs` fails when the three do not name one release; CI runs it with
+`--require-release`.
+
+## Hooks
+
+`.githooks/` holds three hooks: `pre-commit` formats the staged files and runs `verify`,
+`commit-msg` checks the subject line, `pre-push` runs `verify:full`.
