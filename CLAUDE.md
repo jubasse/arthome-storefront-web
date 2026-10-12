@@ -78,3 +78,25 @@ done. No dissertation. Otherwise add only what the diff cannot show: the risk, w
 what was not.
 
 Full rule: `code-conventions.md` §5.9.
+
+## Stack and commands
+
+Next.js 16 App Router, React 19.3, TypeScript 6, Vitest, ESLint and Prettier from `@arthome/tooling`.
+`next` ships version-matched docs in `node_modules/next/dist/docs/`; read the page for the task
+before writing code. Run `next dev` with `AI_AGENT=1` on a harness the generator does not recognise.
+
+- `pnpm run dev` serves on port 3000, the origin the platform's edge allows.
+- `pnpm run verify` is the gate on every commit; `pnpm run verify:full` runs before a push.
+- `pnpm run build` builds the application.
+- `pnpm run use-core <version>` points the `@arthome/*` packages at an arthome-core release.
+- ESLint runs through its CLI; `next lint` no longer exists.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

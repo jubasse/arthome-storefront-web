@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+.env
+.env*.local
+
+# NOT IGNORED, deliberately: docs/arthome/. Those documents are copied in by
+# `arthome-sync-agent-docs` on every install AND committed, so a stale copy shows up in
+# `git status` the first time anybody installs after a pull.
