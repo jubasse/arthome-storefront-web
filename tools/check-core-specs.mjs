@@ -2,9 +2,6 @@
 // check-core-specs — every @arthome/* dependency is a release asset of arthome-core,
 // names its own package, and all of them name one version. Two versions would install
 // two copies of the domain and break every instanceof.
-//
-// `--require-release` is what CI passes; this repository has no local-build mode, so the
-// check is the same without it.
 
 import fs from 'node:fs';
 import path from 'node:path';

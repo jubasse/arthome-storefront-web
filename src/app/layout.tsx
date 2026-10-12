@@ -1,8 +1,9 @@
+import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 import { Locale } from '@arthome/core';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Arthome',
 };
 

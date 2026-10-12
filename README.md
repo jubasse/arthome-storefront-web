@@ -35,8 +35,7 @@ pnpm run use-core 0.4.0
 ```
 
 This checks that the release assets exist, rewrites the three specs in `package.json` and installs.
-`pnpm run check:core-specs` fails when the three do not name one release; CI runs it with
-`--require-release`.
+`pnpm run check:core-specs` fails when the three do not name one release; CI runs it too.
 
 ## Hooks
 
