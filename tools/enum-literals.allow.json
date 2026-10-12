@@ -1,0 +1,12 @@
+[
+  {
+    "file": "src/app/sign-in/sign-in-form.tsx",
+    "value": "email",
+    "reason": "The HTML input name, type and autocomplete token for the email field, not a notification channel."
+  },
+  {
+    "file": "src/lib/bff-proxy.ts",
+    "value": "manual",
+    "reason": "fetch's RequestRedirect option (the proxy relays a redirect, it never follows one), not an incident cause."
+  }
+]

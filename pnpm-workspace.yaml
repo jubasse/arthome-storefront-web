@@ -1,0 +1,24 @@
+# One package: this file carries pnpm's settings. `packages` names the root itself because
+#   the gates read the layout from here and refuse a file that declares none (a gate that
+#   scans an empty set exits 0), and the file has to exist for the settings below.
+packages:
+  - "."
+
+# 10080 minutes = one week during which pnpm refuses a freshly published version.
+# Same posture and reason as arthome-platform and arthome-core.
+minimumReleaseAge: 10080
+
+minimumReleaseAgeExclude:
+  # The @arthome/* packages are release assets of arthome-core; without this a just-released
+  # version would be invisible for a week to the repository waiting for it.
+  - "@arthome/*"
+
+# A dependency's install script runs only on a named approval.
+allowBuilds:
+  # unrs-resolver: the native resolver behind eslint-import-resolver-typescript. Without its
+  # binary, import-x/no-cycle runs, finds nothing and passes: a green gate that checks nothing.
+  unrs-resolver: true
+
+  # sharp: next/image's optional optimizer. Its install script only fetches a binary that
+  # nothing renders yet (no next/image in the scaffold); denied until an image is served.
+  sharp: false
